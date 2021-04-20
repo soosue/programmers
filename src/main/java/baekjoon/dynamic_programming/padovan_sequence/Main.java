@@ -16,6 +16,7 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         for (int i = 0; i < n; i++) {
             int N = Integer.parseInt(br.readLine());
+            //O(n)
             for (int j = 4; j <= N; j++)
                 dp[j] = dp[j - 2] + dp[j - 3];
 
