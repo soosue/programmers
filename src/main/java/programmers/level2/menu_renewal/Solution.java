@@ -67,13 +67,13 @@ public class Solution {
         }
     }
 
-    private void selectResult(Map<Integer, Map<String, Integer>> countMap) {
-        for (Integer course : countMap.keySet()) {
-            if (countMap.get(course).isEmpty()) continue;
+    private void selectResult(Map<Integer, Map<String, Integer>> courseCntMap) {
+        for (Integer course : courseCntMap.keySet()) {
+            if (courseCntMap.get(course).isEmpty()) continue;
 
-            int maxCnt = Collections.max(countMap.get(course).values());
+            int maxCnt = Collections.max(courseCntMap.get(course).values());
             if (maxCnt <= 1) continue;
-            for (Map.Entry<String, Integer> entry : countMap.get(course).entrySet()) {
+            for (Map.Entry<String, Integer> entry : courseCntMap.get(course).entrySet()) {
                 if (entry.getValue() == maxCnt)
                     result.add(entry.getKey());
             }
