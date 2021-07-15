@@ -16,6 +16,7 @@ public class Solution {
         3. 시작은 0,0부터
 
         중간 지점의 좌표를 저장해보자.
+        0,0과 0,1의 중간 지점은 소수다. 전체적인 지도의 크기를 2배로 늘리자.
      */
     private final int LIMIT = 5;
     private Map<Character, int[]> map;
